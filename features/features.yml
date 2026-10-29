@@ -1,0 +1,78 @@
+# features/features.yml — THE FEATURE INDEX for zer0-kernel (schema features/v1, governance kit v0.1.1).
+# One entry per capability, stable id ZK-NNN (never reused). status: shipped | partial | planned | deprecated | tbd.
+# `prd:` links each feature to PRD.md requirements. The PRD "Feature catalog" block is generated:
+#   python3 <bamr87/bamr87>/tools/governance_lint.py prd-sync . --write
+schema: features/v1
+repo: bamr87/zer0-kernel
+
+features:
+  - id: ZK-001
+    title: "Freestanding kernel object and Multiboot2 header build with host gcc/l"
+    description: "Freestanding kernel object and Multiboot2 header build with host gcc/ld via make."
+    implemented: true
+    status: shipped
+    prd: [FR1]
+    surface: infra
+    link: Makefile
+    tags: [phase-1]
+    date: 2026-10-28
+  - id: ZK-002
+    title: "Kernel ELF links with a linker script and boots in QEMU (grub-mkrescue"
+    description: "Kernel ELF links with a linker script and boots in QEMU (grub-mkrescue ISO)."
+    implemented: false
+    status: planned
+    prd: [FR2]
+    surface: infra
+    docs: PRD.md
+    tags: [phase-1]
+    date: 2026-10-28
+  - id: ZK-003
+    title: "Serial and VGA text output drivers"
+    description: "Serial and VGA text output drivers."
+    implemented: false
+    status: planned
+    prd: [FR3]
+    surface: infra
+    docs: PRD.md
+    tags: [phase-2]
+    date: 2026-10-28
+  - id: ZK-004
+    title: "IDT, exceptions and timer interrupts"
+    description: "IDT, exceptions and timer interrupts."
+    implemented: false
+    status: planned
+    prd: [FR4]
+    surface: infra
+    docs: PRD.md
+    tags: [phase-2]
+    date: 2026-10-28
+  - id: ZK-005
+    title: "Paging and physical frame allocator"
+    description: "Paging and physical frame allocator."
+    implemented: false
+    status: planned
+    prd: [FR5]
+    surface: infra
+    docs: PRD.md
+    tags: [phase-3]
+    date: 2026-10-28
+  - id: ZK-006
+    title: "Round-robin scheduler and a minimal shell"
+    description: "Round-robin scheduler and a minimal shell."
+    implemented: false
+    status: planned
+    prd: [FR6]
+    surface: infra
+    docs: PRD.md
+    tags: [phase-3]
+    date: 2026-10-28
+  - id: ZK-007
+    title: "Standard CI gate"
+    description: "Every push and PR runs the fleet's shared standard-ci gate."
+    implemented: true
+    status: shipped
+    prd: [NFR1]
+    surface: infra
+    link: .github/workflows/ci.yml
+    tags: [ci]
+    date: 2026-10-28
