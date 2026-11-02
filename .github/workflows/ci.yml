@@ -27,6 +27,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: sudo apt-get update -q && sudo apt-get install -yq nasm gcc-multilib
       - run: 'make'
