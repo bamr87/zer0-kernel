@@ -11,6 +11,23 @@ From the boot sector up: a freestanding C kernel that boots under QEMU, then gro
 | Version | Date | Notes |
 | --- | --- | --- |
 | 0.1 | 2026-10-28 | Initial requirements and phased roadmap (repo foundation). |
+| 0.2 | 2026-11-16 | Added §1.1 missions (amendment record in docs/amendments/). |
+
+## 1.1 Missions
+
+zer0-kernel's direction is to become the ultimate open home for all things hobby operating-system kernels — data, tools, resources and transparency, gathered in one place that anyone can inspect and reuse.
+
+1. **Provide data, tools, resources and transparency for all stakeholders, systems programmers and students, and the general public.** Learners, hobbyist kernel authors and anyone who wants to see how a machine boots are first-class audiences. The aim is a shared, inspectable commons: the same sources, the same boot path, and the same reproducible QEMU runs for everyone.
+2. **Teach from the boot sector up: a freestanding C kernel that boots under QEMU and grows memory management, interrupts, a scheduler and a tiny shell, with every step reproducible.** The work is learning-first: each layer should be something a reader can build, run and explain.
+3. **Be the zer0 brand's lowest layer and a systems-depth companion to bashOS and kvlite, so the fleet's OS ideas can be studied, compared and reused in the open.** A hobby kernel here should illuminate the layers above it, not disappear into a private tree.
+
+These missions set the course; they do not claim the work is finished. They serve the PRD's learning-first path from a Multiboot2 QEMU boot toward memory management, interrupts, a scheduler and a tiny shell.
+
+**Requirement**
+
+- MR1: Constitution §1 states one direction statement and exactly three numbered missions, and the README and AGENTS.md taglines match that direction and link to constitution §1.
+
+Feature [ZK-008](features/features.yml) traces to requirement MR1.
 
 ## 2. Goals
 
@@ -65,6 +82,7 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | [ZK-005](features/features.yml) | Paging and physical frame allocator | planned | [`PRD.md`](PRD.md) | FR5 |
 | [ZK-006](features/features.yml) | Round-robin scheduler and a minimal shell | planned | [`PRD.md`](PRD.md) | FR6 |
 | [ZK-007](features/features.yml) | Standard CI gate | shipped | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | NFR1 |
+| [ZK-008](features/features.yml) | Constitution missions | planned | [`docs/constitution.md`](docs/constitution.md) · [`PRD.md`](PRD.md) | MR1 |
 
 **Requirement → feature trace**
 
@@ -77,4 +95,5 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | FR5 | ZK-005 |
 | FR6 | ZK-006 |
 | NFR1 | ZK-007 |
+| MR1 | ZK-008 |
 <!-- features:end -->
