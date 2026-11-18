@@ -6,9 +6,17 @@
 > Agents read this before [AGENTS.md](../AGENTS.md) conventions, the [PRD](../PRD.md), or the
 > [feature catalog](../features/features.yml). Ratified by merged PR; amended only per § 8.
 
-## 1. Mission
+## 1. Missions
 
-From the boot sector up: a freestanding C kernel that boots under QEMU, then grows memory management, interrupts, a scheduler and a tiny shell. It is a learning-first portfolio project in the bamr87 fleet: Systems-depth companion to bashos and kvlite; the zer0 brand's lowest layer.
+zer0-kernel's direction is to become the ultimate open home for all things hobby operating-system kernels — data, tools, resources and transparency, gathered in one place that anyone can inspect and reuse.
+
+1. **Provide data, tools, resources and transparency for all stakeholders, systems programmers and students, and the general public.** Learners, hobbyist kernel authors and anyone who wants to see how a machine boots are first-class audiences. The aim is a shared, inspectable commons: the same sources, the same boot path, and the same reproducible QEMU runs for everyone.
+2. **Teach from the boot sector up: a freestanding C kernel that boots under QEMU and grows memory management, interrupts, a scheduler and a tiny shell, with every step reproducible.** The work is learning-first: each layer should be something a reader can build, run and explain.
+3. **Be the zer0 brand's lowest layer and a systems-depth companion to bashOS and kvlite, so the fleet's OS ideas can be studied, compared and reused in the open.** A hobby kernel here should illuminate the layers above it, not disappear into a private tree.
+
+These missions set the course; they do not claim the work is finished. They serve the PRD's learning-first path from a Multiboot2 QEMU boot toward memory management, interrupts, a scheduler and a tiny shell.
+
+_Source: [PRD.md](../PRD.md) §1.1._
 
 ## 2. Invariants (non-negotiable)
 

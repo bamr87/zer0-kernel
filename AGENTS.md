@@ -3,6 +3,8 @@
 
 # zer0-kernel
 
+> zer0-kernel's direction is to become the ultimate open home for all things hobby operating-system kernels: data, tools, resources and transparency, with a freestanding C kernel taught from the boot sector up and reproducible under QEMU for everyone ([constitution](docs/constitution.md) §1).
+
 ## What this repo is
 
 A hobby operating-system kernel in C, booted with Multiboot2 on QEMU. From the boot sector up: a freestanding C kernel that boots under QEMU, then grows memory management, interrupts, a scheduler and a tiny shell.
